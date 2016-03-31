@@ -18,11 +18,16 @@ $(document).ready(function() {
     if (content !== "") {
       $('.messages').append('<li><b>'+ sessionUser.name + '</b>: ' + content + '</li>');
       cleanMessageInput();
+      scrollBottom();
     }
   }
 
   function cleanMessageInput() {
     $('.message_input').val('');
+  }
+
+  function scrollBottom() {
+    $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight }, "fast");
   }
 
 });
