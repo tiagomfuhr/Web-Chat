@@ -10,8 +10,8 @@ body {
 .chat_window {
   position: absolute;
   width: calc(100% - 20px);
-  max-width: 800px;
-  height: 500px;
+  max-width: 900px;
+  height: 600px;
   border-radius: 10px;
   background-color: #fff;
   left: 50%;
@@ -55,20 +55,82 @@ body {
   font-size: 20px;
 }
 
+.content{
+  display: flex;
+  height: 547px
+}
+
+
+.left_participants{
+  left: 0px;
+  width: 40%;
+  max-width: 247px;
+  background: #fff;
+  position: relative;
+  display: block;
+}
+
+.participants{
+  position: relative;
+  list-style: none;
+  padding: 0px 10px 0px 10px;
+  margin: 0;
+}
+
+.participants_item{
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  width: auto
+  max-width: 227px;
+  border-top: 1px solid #edeff2;
+}
+
+.participants_item_avatar{
+  background: #bcbdc0;;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.participants_item_username{
+  width: calc(100% - 50px);
+  overflow: hidden;
+  margin-left: 10px;
+  color: #bcbdc0;
+}
+
+
+
+
+
+
+.right_chat{
+  position: relative;
+  display: block;
+  width: 80%;
+  max-width: 753px;
+}
+
+
 .messages {
   position: relative;
   list-style: none;
   padding: 20px 10px 0 10px;
   margin: 0;
-  height: 347px;
-  overflow: scroll;
+  height: 467px;
+  overflow-y: scroll;
 }
 .messages .message {
   clear: both;
-  overflow: hidden;
-  margin-bottom: 20px;
+  overflow-y: hidden;
+  margin-bottom: 40px;
   transition: all 0.5s linear;
   opacity: 0;
+  height: 50px;
+  background-color: #f5886e;
 }
 .messages .message.left .avatar {
   background-color: #f5886e;
@@ -144,8 +206,7 @@ body {
   position: relative;
   width: 100%;
   background-color: #fff;
-  padding: 20px 20px;
-  position: absolute;
+  padding: 10px 10px;
   bottom: 0;
 }
 .bottom_wrapper .message_input_wrapper {
@@ -193,3 +254,44 @@ body {
 .message_template {
   display: none;
 }
+
+
+@media screen and (max-width: 425px) {
+
+.left_participants{
+  display: none;
+}
+
+.right_chat{
+  width: 100%;
+}
+
+.bottom_wrapper{
+  padding: 10px 10px;
+}
+
+.bottom_wrapper .message_input_wrapper {
+  padding: 0 20px;
+}
+
+
+
+}
+/*
+.bottom_wrapper .send_message {
+  background-color: #FC0;
+}
+
+.bottom_wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom_wrapper .message_input_wrapper {
+  margin: 0 auto;
+}
+
+.bottom_wrapper .send_message {
+  margin: 0 auto;
+}
+*/
